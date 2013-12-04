@@ -13,8 +13,6 @@
 		AF51B6F5184F825A00AF89F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF51B6F3184F825A00AF89F0 /* InfoPlist.strings */; };
 		AF51B6F7184F825A00AF89F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF51B6F6184F825A00AF89F0 /* main.m */; };
 		AF51B6FB184F825A00AF89F0 /* APVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF51B6FA184F825A00AF89F0 /* APVAppDelegate.m */; };
-		AF51B6FE184F825A00AF89F0 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF51B6FC184F825A00AF89F0 /* Main_iPhone.storyboard */; };
-		AF51B701184F825A00AF89F0 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF51B6FF184F825A00AF89F0 /* Main_iPad.storyboard */; };
 		AF51B704184F825A00AF89F0 /* APVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF51B703184F825A00AF89F0 /* APVViewController.m */; };
 		AF51B706184F825A00AF89F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF51B705184F825A00AF89F0 /* Images.xcassets */; };
 		AF51B70D184F825A00AF89F0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF51B70C184F825A00AF89F0 /* XCTest.framework */; };
@@ -45,8 +43,6 @@
 		AF51B6F8184F825A00AF89F0 /* ApportableWebView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApportableWebView-Prefix.pch"; sourceTree = "<group>"; };
 		AF51B6F9184F825A00AF89F0 /* APVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APVAppDelegate.h; sourceTree = "<group>"; };
 		AF51B6FA184F825A00AF89F0 /* APVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APVAppDelegate.m; sourceTree = "<group>"; };
-		AF51B6FD184F825A00AF89F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		AF51B700184F825A00AF89F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		AF51B702184F825A00AF89F0 /* APVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APVViewController.h; sourceTree = "<group>"; };
 		AF51B703184F825A00AF89F0 /* APVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APVViewController.m; sourceTree = "<group>"; };
 		AF51B705184F825A00AF89F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -116,8 +112,6 @@
 			children = (
 				AF51B6F9184F825A00AF89F0 /* APVAppDelegate.h */,
 				AF51B6FA184F825A00AF89F0 /* APVAppDelegate.m */,
-				AF51B6FC184F825A00AF89F0 /* Main_iPhone.storyboard */,
-				AF51B6FF184F825A00AF89F0 /* Main_iPad.storyboard */,
 				AF51B702184F825A00AF89F0 /* APVViewController.h */,
 				AF51B703184F825A00AF89F0 /* APVViewController.m */,
 				AF51B705184F825A00AF89F0 /* Images.xcassets */,
@@ -232,9 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF51B701184F825A00AF89F0 /* Main_iPad.storyboard in Resources */,
 				AF51B706184F825A00AF89F0 /* Images.xcassets in Resources */,
-				AF51B6FE184F825A00AF89F0 /* Main_iPhone.storyboard in Resources */,
 				AF51B6F5184F825A00AF89F0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,22 +277,6 @@
 				AF51B6F4184F825A00AF89F0 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		AF51B6FC184F825A00AF89F0 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF51B6FD184F825A00AF89F0 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		AF51B6FF184F825A00AF89F0 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF51B700184F825A00AF89F0 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		AF51B715184F825A00AF89F0 /* InfoPlist.strings */ = {
@@ -475,6 +451,7 @@
 				AF51B71E184F825A00AF89F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF51B71F184F825A00AF89F0 /* Build configuration list for PBXNativeTarget "ApportableWebViewTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +460,7 @@
 				AF51B721184F825A00AF89F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
