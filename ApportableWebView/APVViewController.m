@@ -44,7 +44,12 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    NSString *documentTitle = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    [self performSelector:@selector(printDocumentTitle) withObject:nil afterDelay:0];
+}
+
+- (void)printDocumentTitle
+{
+    NSString *documentTitle = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     
     NSLog(@"documentTitle = '%@'", documentTitle);
 }
