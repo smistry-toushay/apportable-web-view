@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface APVViewController : UIViewController <UIWebViewDelegate>
+#import <UIKit/UIWebViewController.h>
 
-@property (nonatomic, strong) UIWebView *webView;
+@interface APVViewController : UIViewController
+
+@property (nonatomic, strong) UIWebViewController *webViewController;
 
 @end

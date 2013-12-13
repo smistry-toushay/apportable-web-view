@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Sandeep Mistry. All rights reserved.
 //
 
+
+
 #import "APVViewController.h"
 
 @interface APVViewController ()
@@ -14,44 +16,40 @@
 
 @implementation APVViewController
 
+- (id)init
+{
+    if(self = [super init]) {
+        NSURL *url = [NSURL URLWithString:@"http://www.youtube.com/watch?v=40rAtzemb-4"];
+        
+        self.webViewController = [[UIWebViewController alloc] initWithTitle:@"title" URL:url overrideURLLoadingPrefix:@"jjjj" withCompletion:nil];
+    }
+    
+    return self;
+}
+
 - (void)loadView
 {
     self.view = [[UIView alloc] init];
-    self.view.backgroundColor = [UIColor darkGrayColor];
+    self.view.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0];
     self.view.frame = CGRectMake(0, 0, 320, 480);
     self.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    
-    UIWebView *webView = [[UIWebView alloc] init];
-    webView.frame = CGRectMake(20, 20, 280, 440);
-    webView.delegate = self;
-    webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    [self.view addSubview:webView];
-    self.webView = webView;
+    self.view.autoresizesSubviews = YES;
 }
 
-- (void)viewDidLoad
+
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-    
-    self.webView.allowsInlineMediaPlayback = YES;
-    self.webView.mediaPlaybackRequiresUserAction = NO;
-	
-    NSURL *url = [NSURL URLWithString:@"http://www.youtube.com/watch?v=40rAtzemb-4"];
-    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
-    
-    [self.webView loadRequest:urlRequest];
+    [self presentViewController:self.webViewController animated:YES completion:nil];
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView
+- (BOOL)shouldAutorotate
 {
-    [self performSelector:@selector(printDocumentTitle) withObject:nil afterDelay:0];
+    return YES;
 }
 
-- (void)printDocumentTitle
+- (NSUInteger)supportedInterfaceOrientations
 {
-    NSString *documentTitle = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-    
-    NSLog(@"documentTitle = '%@'", documentTitle);
+    return UIInterfaceOrientationMaskAll;
 }
 
 @end
